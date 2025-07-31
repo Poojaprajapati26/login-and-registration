@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #ee9ca7, #ffdde1, #a1c4fd, #c2e9fb);
+  background-size: 600% 600%;
+  animation: gradientAnimation 20s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.todo-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 70px auto;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.input-area button {
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background: linear-gradient(45deg, #38f9d7, #43e97b);
+}
+
+.progress-container {
+  height: 15px;
+  width: 100%;
+  background-color: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  transition: width 0.5s ease;
+}
+
+ul#task-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+  margin-top: 10px;
+}
+
+ul#task-list li {
+  background: #f2f2f2;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+li span.task-text {
+  font-weight: bold;
+  color: #333;
+}
+
+li span.time-stamp {
+  font-size: 12px;
+  color: #888;
+}
+
+li.completed {
+  background: #d3f9d8;
+  text-decoration: line-through;
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.complete-btn {
+  background-color: #00c853;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #d32f2f;
+  color: white;
+}
