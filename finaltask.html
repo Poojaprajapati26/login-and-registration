@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href=" ft.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">LOGO</h2>
+        <nav class="navigation">
+            <a href="#">HOME</a>
+             <a href="#">ABOUT</a>
+              <a href="#">SERVICES</a>
+               <a href="#">CONTACT</a>
+                <button class="btnlogin-popup">Login</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-circle-outline"></ion-icon></span>
+        <div class="form-box login">
+            <h2>LOGIN</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+
+                <div class="remember-forget">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forget Password?</a>
+
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register"><p>Don't have a account?<a href="#"  class="register-link">Register</a></p></div>
+            </form>
+        </div>
+    <div class="form-box register">
+        <h2>REGISTER YOURSELF</h2>
+        <form action="#"> 
+            <div class=" input-box">
+                <span class="icon"></span>
+                <input type="text" placeholder=" first last">
+                <label>Full Name</label>
+            </div>
+            <div class=" input-box">
+                <span class="icon"></span>
+                <input type="email" required >
+                <label>Email Address</label>
+            </div>
+            <div class=" input-box">
+                <span class="icon"></span>
+                <input type="password" id="password" oninput="checkStrength()" required >
+                <div id="strengthIndicator"> Strength:</div>
+                <label>Password</label>
+            </div>
+            <div class=" input-box">
+                <span class="icon"></span>
+                <input type="confirm password" required >
+                <label>Confirm Password</label>
+            </div>
+            <div class=" input-box">
+                <span class="icon"></span>
+                <input type="date" required >
+                <label>Date of Birth</label>
+            </div>
+            <div class=" input-box">
+                <span class="icon"></span>
+                <label>Gender</label>
+                <select required>
+                    <option value="">select gender</option>
+                    <option value="female">female</option>
+                    <option value="male">male</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+                <div class=" input-box">
+                <span class="icon"></span>
+                <input type="file" accept="image/*" required >
+                <label>Profile Picture</label>
+            </div>
+            <div class=" remember-forget">
+                <span class="icon"></span>
+                <label><input type="checkbox" required> I agree to the terms and conditions</label></div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register"><p> Don't have an account?<a href="#" class="login-link">login</a></p></div>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
