@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do App with Time</title>
+  <link rel="stylesheet" href="styletodo.css"/>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="todo-box">
+    <h1>🕒 Task Tracker</h1>
+
+    <div class="input-area">
+      <input type="text" id="task-input" placeholder="What's your plan?" />
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
